@@ -27,7 +27,7 @@ public interface ProductService {
      *
      * @return
      */
-    List<ProductInfo> findeUpAll();
+    List<ProductInfo> findUpAll();
 
     Page<ProductInfo> findAll(Pageable pageable);
 

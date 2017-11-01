@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author sifu
  */
-public interface ProductInfoRepository extends JpaRepository<ProductInfo,Integer> {
+public interface ProductInfoRepository extends JpaRepository<ProductInfo,String> {
 
     /**
      * 列出所有相同状态的商品信息
