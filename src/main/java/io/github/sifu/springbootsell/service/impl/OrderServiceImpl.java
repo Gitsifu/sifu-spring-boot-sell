@@ -4,7 +4,14 @@ import io.github.sifu.springbootsell.dto.OrderDto;
 import io.github.sifu.springbootsell.service.OrderService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
+/**
+ *
+ *
+ * @author sifu
+ */
+@Service
 public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDto create(OrderDto orderDto) {
