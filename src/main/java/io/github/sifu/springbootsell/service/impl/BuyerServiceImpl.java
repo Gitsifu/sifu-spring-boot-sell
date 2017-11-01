@@ -26,6 +26,11 @@ public class BuyerServiceImpl implements BuyerService {
 
     @Override
     public OrderDto findOrderOne(String openid, String orderId) {
+        return checkOrderOwner(openid,orderId);
+    }
+
+    @Override
+    public OrderDto cancelOrder(String openid, String orderId) {
         OrderDto orderDto = checkOrderOwner(openid,orderId);
         if (orderDto == null){
             log.error("【取消订单】擦还不到该订单，orderId={}",orderId);
@@ -45,10 +50,5 @@ public class BuyerServiceImpl implements BuyerService {
             throw new SellException(ResultEnum.ORDER_OWNER_ERROER);
         }
         return orderDto;
-    }
-
-    @Override
-    public OrderDto cancelOrder(String openid, String orderId) {
-        return null;
     }
 }
