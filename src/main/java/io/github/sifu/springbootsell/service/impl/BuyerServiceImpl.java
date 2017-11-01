@@ -33,7 +33,7 @@ public class BuyerServiceImpl implements BuyerService {
     public OrderDto cancelOrder(String openid, String orderId) {
         OrderDto orderDto = checkOrderOwner(openid,orderId);
         if (orderDto == null){
-            log.error("【取消订单】擦还不到该订单，orderId={}",orderId);
+            log.error("【取消订单】查不到该订单，orderId={}",orderId);
             throw new SellException(ResultEnum.ORDER_NOT_EXIST);
         }
         return null;
