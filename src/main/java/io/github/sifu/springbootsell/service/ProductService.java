@@ -37,7 +37,7 @@ public interface ProductService {
      * 加仓库
      * @param carDtoList
      */
-    void inncreaseStock(List<CarDto> carDtoList);
+    void increaseStock(List<CarDto> carDtoList);
 
     /**
      * 减仓库

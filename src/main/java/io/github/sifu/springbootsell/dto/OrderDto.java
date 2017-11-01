@@ -50,6 +50,11 @@ public class OrderDto {
     /**
      * 订单状态，默认为新下单
      */
+    private Integer orderStatus;
+
+    /**
+     * 支付状态
+     */
     private Integer payStatus;
 
     /**

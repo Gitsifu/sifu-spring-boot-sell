@@ -36,7 +36,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void inncreaseStock(List<CarDto> carDtoList) {
+    public void increaseStock(List<CarDto> carDtoList) {
 
     }
 
