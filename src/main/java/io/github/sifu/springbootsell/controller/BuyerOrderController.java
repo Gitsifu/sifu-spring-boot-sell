@@ -38,7 +38,13 @@ public class BuyerOrderController {
         this.buyerService = buyerService;
     }
 
-    //创建订单
+    /**
+     * 创建订单
+     *
+     * @param orderForm
+     * @param bindingResult
+     * @return
+     */
     @PostMapping("/create")
     public ResultVO<Map<String, String>> create(@Valid OrderForm orderForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -58,8 +64,14 @@ public class BuyerOrderController {
         return ResultVOUtil.success(map);
     }
 
-    //订单列表
-    @GetMapping("list")
+    /**
+     * 查询订单列表
+     *
+     * @param openid
+     * @param orderId
+     * @return
+     */
+    @GetMapping("/list")
     public ResultVO<OrderDto> list(
         @RequestParam("openid") String openid,
         @RequestParam("orderId") String orderId){
@@ -68,7 +80,13 @@ public class BuyerOrderController {
         return ResultVOUtil.success(orderDto);
     }
 
-    //取消订单
+    /**
+     * 取消订单
+     *
+     * @param openid
+     * @param orderId
+     * @return
+     */
     @PostMapping("/cancel")
     public ResultVO cancel(
             @RequestParam("openid") String openid,
