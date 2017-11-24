@@ -2,6 +2,8 @@ package io.github.sifu.springbootsell.pojo;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,11 +37,13 @@ public class ProductCategory {
     /**
      * 创建时间
      */
+    @CreatedDate
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @LastModifiedDate
     private Date updateTime;
 
     public ProductCategory(String categoryName, Integer categoryType) {

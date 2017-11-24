@@ -3,6 +3,8 @@ package io.github.sifu.springbootsell.pojo;
 import io.github.sifu.springbootsell.enums.OrderStatusEnum;
 import io.github.sifu.springbootsell.enums.PayStatusEnum;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -62,11 +64,13 @@ public class OrderMaster {
     /**
      * 创建时间
      */
+    @CreatedDate
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @LastModifiedDate
     private Date updateTime;
 
 }
